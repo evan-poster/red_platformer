@@ -17,3 +17,6 @@ func _process(_delta):
 		get_tree().paused = !get_tree().paused
 		# Toggle visibility of pause menu
 		$Pause.visible = get_tree().paused
+	# Quit game if 'q' is pressed
+	if Input.is_action_just_pressed("ui_quit"):
+		get_tree().quit()
