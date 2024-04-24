@@ -13,3 +13,6 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Ignore All Assets Until Licensing is figured out
+Assets/
