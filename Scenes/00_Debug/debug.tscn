@@ -1,0 +1,247 @@
+[gd_scene load_steps=35 format=3 uid="uid://u3ffkuw4bwej"]
+
+[ext_resource type="Script" path="res://Scenes/00_Debug/debug.gd" id="1_b84qt"]
+[ext_resource type="Script" path="res://Scenes/00_Debug/Player.gd" id="2_fmh65"]
+[ext_resource type="Texture2D" uid="uid://dbm0u2smseenr" path="res://Assets/Individual Sprites/adventurer-idle-00.png" id="3_e6fy7"]
+[ext_resource type="Texture2D" uid="uid://ctn86hojyutlo" path="res://Assets/Individual Sprites/adventurer-fall-00.png" id="3_hiit0"]
+[ext_resource type="Texture2D" uid="uid://cw18bvrnb3fps" path="res://Assets/Individual Sprites/adventurer-fall-01.png" id="4_4yr7r"]
+[ext_resource type="Texture2D" uid="uid://qmbxrko6nfnd" path="res://Assets/Individual Sprites/adventurer-idle-01.png" id="4_pnipv"]
+[ext_resource type="Texture2D" uid="uid://cn1nvmoakf0qk" path="res://Assets/Individual Sprites/adventurer-idle-02.png" id="5_t3fuo"]
+[ext_resource type="Texture2D" uid="uid://cj65b2prfdjaq" path="res://Assets/Individual Sprites/adventurer-idle-03.png" id="6_tbmuo"]
+[ext_resource type="Texture2D" uid="uid://ib2pli60ivr1" path="res://Assets/Individual Sprites/adventurer-idle-2-00.png" id="7_5314d"]
+[ext_resource type="Texture2D" uid="uid://c5u13l4eyfk8n" path="res://Assets/Individual Sprites/adventurer-idle-2-01.png" id="8_g043w"]
+[ext_resource type="Texture2D" uid="uid://bwj2jnjd0cbhy" path="res://Assets/Individual Sprites/adventurer-idle-2-02.png" id="9_skbka"]
+[ext_resource type="Texture2D" uid="uid://cmb3jxk8mjjdd" path="res://Assets/Individual Sprites/adventurer-idle-2-03.png" id="10_w0r5x"]
+[ext_resource type="Texture2D" uid="uid://dn04pnaanr784" path="res://Assets/Individual Sprites/adventurer-run-00.png" id="11_a2rx4"]
+[ext_resource type="Texture2D" uid="uid://bodfag51lbcmi" path="res://Assets/Individual Sprites/adventurer-run-01.png" id="12_wjv3a"]
+[ext_resource type="Texture2D" uid="uid://cwmdxr8vmoene" path="res://Assets/Individual Sprites/adventurer-run-02.png" id="13_4j4hq"]
+[ext_resource type="Texture2D" uid="uid://drijp8vsgk1hm" path="res://Assets/Individual Sprites/adventurer-jump-00.png" id="13_5alwd"]
+[ext_resource type="Texture2D" uid="uid://bg0x357mhprom" path="res://Assets/Individual Sprites/adventurer-run-03.png" id="14_883xj"]
+[ext_resource type="Texture2D" uid="uid://dt3os78kgqux4" path="res://Assets/Individual Sprites/adventurer-jump-01.png" id="14_o6oyt"]
+[ext_resource type="Texture2D" uid="uid://bqacdmnh6hpw3" path="res://Assets/Individual Sprites/adventurer-jump-02.png" id="15_5eo6j"]
+[ext_resource type="Texture2D" uid="uid://y3j8ux8nyx1j" path="res://Assets/Individual Sprites/adventurer-run-04.png" id="15_r0r52"]
+[ext_resource type="Texture2D" uid="uid://ei1b4w5cuux4" path="res://Assets/Individual Sprites/adventurer-jump-03.png" id="16_daowm"]
+[ext_resource type="Texture2D" uid="uid://cmx1hy0tpyihl" path="res://Assets/Individual Sprites/adventurer-run-05.png" id="16_l3oya"]
+[ext_resource type="Texture2D" uid="uid://dfeffkm5iy4qr" path="res://Assets/Individual Sprites/adventurer-run3-00.png" id="17_c555n"]
+[ext_resource type="Texture2D" uid="uid://ditl3uvygxnil" path="res://Assets/Individual Sprites/adventurer-run3-01.png" id="18_y7kxi"]
+[ext_resource type="Texture2D" uid="uid://yc8i4agxg846" path="res://Assets/Individual Sprites/adventurer-run3-02.png" id="19_mv0as"]
+[ext_resource type="Texture2D" uid="uid://dl0rpul8uvdyy" path="res://Assets/Individual Sprites/adventurer-run3-03.png" id="20_ey77t"]
+[ext_resource type="Texture2D" uid="uid://dih1q4r5tkexv" path="res://Assets/Individual Sprites/adventurer-run3-04.png" id="21_rdm04"]
+[ext_resource type="Texture2D" uid="uid://buaeta4ca7dp1" path="res://Assets/Individual Sprites/adventurer-run3-05.png" id="22_oq2gl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnl0d"]
+size = Vector2(1152, 136)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ci6sx"]
+size = Vector2(200, 8)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ryjle"]
+radius = 6.66666
+height = 30.6667
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5i40q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hiit0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4yr7r")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_e6fy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pnipv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t3fuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tbmuo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_5314d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_g043w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_skbka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_w0r5x")
+}],
+"loop": true,
+"name": &"idle_armed",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_5alwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_o6oyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5eo6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_daowm")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_a2rx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wjv3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4j4hq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_883xj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_r0r52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_l3oya")
+}],
+"loop": true,
+"name": &"run",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_c555n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_y7kxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_mv0as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ey77t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rdm04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_oq2gl")
+}],
+"loop": true,
+"name": &"run_armed",
+"speed": 7.0
+}]
+
+[sub_resource type="SystemFont" id="SystemFont_f0xva"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y3ah6"]
+font = SubResource("SystemFont_f0xva")
+font_size = 150
+
+[node name="Debug" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_b84qt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.0470588, 0.172549, 0.2, 1)
+
+[node name="FloorBody" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorBody"]
+position = Vector2(576, 580)
+shape = SubResource("RectangleShape2D_fnl0d")
+
+[node name="ColorRect" type="ColorRect" parent="FloorBody"]
+offset_top = 512.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.501961, 0.25098, 0.203922, 1)
+
+[node name="Terrain" type="StaticBody2D" parent="."]
+position = Vector2(600, 450)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain"]
+position = Vector2(4, -4)
+shape = SubResource("RectangleShape2D_ci6sx")
+one_way_collision = true
+
+[node name="ColorRect" type="ColorRect" parent="Terrain"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -8.0
+offset_right = 104.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.501961, 0.25098, 0.203922, 1)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+process_mode = 1
+position = Vector2(100, 100)
+scale = Vector2(3, 3)
+script = ExtResource("2_fmh65")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_ryjle")
+
+[node name="ColorRect" type="ColorRect" parent="Player"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -48.0
+offset_right = 24.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0509804, 0.509804, 0.666667, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_5i40q")
+animation = &"run_armed"
+autoplay = "idle"
+
+[node name="Pause" type="Node2D" parent="."]
+process_mode = 2
+visible = false
+
+[node name="PauseBG" type="ColorRect" parent="Pause"]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.243137, 0.243137, 0.243137, 0.454902)
+
+[node name="PauseLabel" type="Label" parent="Pause"]
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "- PAUSE -"
+label_settings = SubResource("LabelSettings_y3ah6")
+horizontal_alignment = 1
+vertical_alignment = 1
